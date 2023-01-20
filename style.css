@@ -1,0 +1,117 @@
+:root {
+    --body-bg-color: #121214;
+    --text-color: #E1E1E6;
+    --title-color: #04D361;
+    --form-color: #A8A8A8;
+    --bg-button-color: #8257e5;
+    
+}
+
+*{  
+    font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: var(--body-bg-color);
+    display: grid;
+    width: 100vw;
+
+    grid-template-areas: "content main_image";
+    grid-template-rows: 100vh;
+    grid-template-columns: 50vw 50vw;    
+}
+
+main{
+    margin: 50px 30px;
+    grid-area: content;
+     
+}
+
+h1 {
+    background-image: url(assets/logo.svg);
+    background-size: 390px;  /* shows image */
+    height: 96px;                        /* be sure to set height & width */
+    width:  390px;
+
+    /* Hide the text. */
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    margin-bottom: 70px;
+}
+
+h2{
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+p{
+    color: var(--text-color);
+    margin-top: 25px;
+}
+
+form{
+    margin-top: 35px;
+    color: var(--form-color);
+    position: relative;    
+}
+
+input{
+    outline: none;
+    height: 45px;
+    width: 780px;
+    border-top: none;
+    border-bottom: none ;
+    border-right: none;
+    border-left:  5px solid #04D361;
+    
+}
+.input_email{
+    display: flex;  
+    box-shadow: 2px 2px  7px rgb(29, 28, 28);
+    
+}
+button{
+    background-color: var(--bg-button-color);
+    border: none;
+    height: 45px;
+    width: 45px;
+   
+}
+button:focus{
+    outline: 1px solid #04D361;
+}
+.input_and_links{
+    width: 825px;
+    
+}
+
+
+.image_bcg{
+    width: 1fr;
+    grid-area: main_image;
+    background-image: url(assets/read_news.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat ;
+}
+.read_more_link{
+    width: fit-content;
+    display: flex;
+    margin-top: 25px;
+}
+
+.read_more_link a{
+    text-decoration: none;
+    font-weight: 500;
+    width: fit-content;
+    color: var(--bg-button-color); 
+}
+.read_more_link img{
+    background-color: #121214;
+    fill: #8257e5;
+    width: 24px;
+}
